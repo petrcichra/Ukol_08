@@ -57,7 +57,7 @@ public class Student implements InterfaceStudent{
     }
 
     @Override
-    public void upravID() {
+    public String upravID() {
         String upraveneID;
         if (studentskeCislo > 10)
         {
@@ -69,5 +69,7 @@ public class Student implements InterfaceStudent{
         {
             upraveneID = String.valueOf(studentskeCislo);
         }
+
+        return upraveneID;
     }
 }
