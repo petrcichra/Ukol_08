@@ -22,7 +22,7 @@ public class SkolniTridaService extends SkolniTrida {
                     "# " + radek + " # "
                     + student.upravID() + " - "
                     + student.getJmeno() + " " + student.getPrijmeni()
-                    + " (" + student.getRokNarozeni() + ")"
+                    + " (" + student.getRokNarozeni().getYear() +")"
             );
 
         }

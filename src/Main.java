@@ -18,7 +18,7 @@ public class Main {
         System.out.println(trida2022);
         System.out.println(trida2022.vypisStudenty());
 
-        System.out.println(student1.upravID());
+        //System.out.println(student1.upravID());
 
     }
 }
