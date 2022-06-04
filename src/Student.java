@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class Student {
+public class Student implements InterfaceStudent{
 
     private String jmeno;
     private String prijmeni;
@@ -54,5 +54,20 @@ public class Student {
                 ", rokNarozeni=" + rokNarozeni +
                 ", studentskeCislo=" + studentskeCislo +
                 '}';
+    }
+
+    @Override
+    public void upravID() {
+        String upraveneID;
+        if (studentskeCislo > 10)
+        {
+            upraveneID = "00"+studentskeCislo;
+        } else if (studentskeCislo > 9 && studentskeCislo < 99)
+        {
+            upraveneID = "0"+studentskeCislo;
+        } else
+        {
+            upraveneID = String.valueOf(studentskeCislo);
+        }
     }
 }
