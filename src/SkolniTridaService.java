@@ -20,7 +20,7 @@ public class SkolniTridaService extends SkolniTrida {
         {
             System.out.println(
                     "# " + radek + " # "
-                    + student.getStudentskeCislo() + " - "
+                    + student.upravID() + " - "
                     + student.getJmeno() + " " + student.getPrijmeni()
                     + " (" + student.getRokNarozeni() + ")"
             );
