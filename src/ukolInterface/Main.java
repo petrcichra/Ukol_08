@@ -18,8 +18,8 @@ public class Main {
         trida.listStudentu.add(student4);
         trida.listStudentu.add(student5);
 
-        //trida.printClass(trida);
-        //trida.printClassTwo(trida);
+        trida.printClass(trida);
+        trida.printClassTwo(trida);
         trida.printClassThree(trida);
 
 
