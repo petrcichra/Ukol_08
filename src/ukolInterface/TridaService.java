@@ -74,6 +74,7 @@ public class TridaService implements TridaInterface{
                  );
              }
          } catch (IOException e) {
+             System.out.println("Hele něco se pokazilo se souborem");
              e.printStackTrace();
          }
 
