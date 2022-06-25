@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class TridaService implements TridaInterface{
 
 
-
+    public static final int STATUS_CANNOT_READ_FILE = 1;
 
     @Override
     public void printClass(SkolniTrida trida) {
@@ -49,6 +49,7 @@ public class TridaService implements TridaInterface{
          String delimiter = ";";
 
 
+
          System.out.println(
                  "Třída: " + trida.getNazevTridy() + "\n" +
                  "Třídní učitel: " + trida.getTridniUcitel().getJmeno() + ", " + trida.getTridniUcitel().getPrijmeni() + "\n" +
@@ -74,8 +75,11 @@ public class TridaService implements TridaInterface{
                  );
              }
          } catch (IOException e) {
-             System.out.println("Hele něco se pokazilo se souborem");
-             e.printStackTrace();
+             System.err.println(
+                     "Chyba při čtení souboru "+ filename
+                             +":\n"+e.getLocalizedMessage()
+                             +":\n"+e.getStackTrace());
+             System.exit(STATUS_CANNOT_READ_FILE);
          }
 
 
